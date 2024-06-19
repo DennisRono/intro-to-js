@@ -1,21 +1,22 @@
-# Introduction to JavaScript
+# Introduction to JavaScript: Beginner Introduction to JavaScript (All you need to Know)
 
-- JavaScript files have the file extension `.js`
+JavaScript files have the file extension `.js`
 
 ## Keywords in JavaScript
 
-- Keywords are reserved words that have special meanings and are used to perform various operations within js
-- Keywords include:- `await`, `break`, `case`, `catch`, `class`, `const`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `enum`, `export`, `extends`, `false`, `finally`, `for`, `function`, `if`, `import`, `in`, `instanceof`, `new`, `null`, `return`, `super`, `switch`, `this`, `throw`, `true`, `try`, `typeof`, `var`, `void`, `while`, `with`, `yield` and many more.
+Keywords are reserved words that have special meanings and are used to perform various operations within js
+Keywords include:- `await`, `break`, `case`, `catch`, `class`, `const`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `enum`, `export`, `extends`, `false`, `finally`, `for`, `function`, `if`, `import`, `in`, `instanceof`, `new`, `null`, `return`, `super`, `switch`, `this`, `throw`, `true`, `try`, `typeof`, `var`, `void`, `while`, `with`, `yield` and many more.
 
 ## Variables
 
-- **[LAYMAN]**: Container for storing values
-  - `var`, `let`, or `const`
-- Rules when declaring variables in js
-  - Variable names can contain letters, digits, underscores (\_), and dollar signs ($).
-  - Variable names must begin with a letter, underscore, or dollar sign.
-  - Variable names are case-sensitive (myVar and myvar are different variables).
-  - Reserved words cannot be used as variable names (e.g., var, function, let, etc.).
+**[LAYMAN]**: Container for storing values
+
+- `var`, `let`, or `const`
+  Rules when declaring variables in js
+- Variable names can contain letters, digits, underscores (\_), and dollar signs ($).
+- Variable names must begin with a letter, underscore, or dollar sign.
+- Variable names are case-sensitive (myVar and myvar are different variables).
+- Reserved words cannot be used as variable names (e.g., var, function, let, etc.).
 
 ## Data Types
 
@@ -98,7 +99,7 @@ let anotherBigInt = 1234567890123456789012345678901234567890n // Using the 'n' n
 
 ### Primitive Data Types
 
-- Basic, immutable data types that hold the actual values and not references.
+Basic, immutable data types that hold the actual values and not references.
 
 # Operations
 
@@ -275,8 +276,8 @@ console.log(greeting)
 
 # Functions
 
-- functions are used to encapsulate a pieces of code that can be executed and reused.
-- functions are defined using the function keyword. They can be named or anonymous.
+functions are used to encapsulate a pieces of code that can be executed and reused.
+functions are defined using the function keyword. They can be named or anonymous.
 
 ```javascript
 function greet(name) {
@@ -285,7 +286,7 @@ function greet(name) {
 console.log(greet('Kibet'))
 ```
 
-- Arrow functions provide a more concise syntax than normal functions, especially useful for short, single-expression functions.
+Arrow functions provide a more concise syntax than normal functions, especially useful for short, single-expression functions.
 
 ```javascript
 let add = (a, b) => {
@@ -296,11 +297,11 @@ console.log(add(2, 3))
 
 # Conditional Statements
 
-- They are used to make decisions in code based on certain conditions.
+They are used to make decisions in code based on certain conditions.
 
 ## `if else` Statement
 
-- The `if` statement evaluates a condition inside parentheses. If the condition is true, the block of code inside the curly braces {} is executed. The `else` statement is used with an if statement to execute a block of code if the `if` condition evaluates to false.
+The `if` statement evaluates a condition inside parentheses. If the condition is true, the block of code inside the curly braces {} is executed. The `else` statement is used with an if statement to execute a block of code if the `if` condition evaluates to false.
 
 ```javascript
 let temperature = 25
@@ -314,7 +315,7 @@ if (temperature > 30) {
 
 ## Ternary Operator (`? :`)
 
-- The ternary operator provides a concise way to write simple if...else statements. It evaluates a condition and returns one value if true, and another value if false.
+The ternary operator provides a concise way to write simple if...else statements. It evaluates a condition and returns one value if true, and another value if false.
 
 ```javascript
 let score = 75
@@ -325,7 +326,7 @@ console.log(message)
 
 ## `switch` Statement
 
-- The `switch` statement is used to perform different actions based on different conditions. It evaluates an expression and matches the expression's value to a case clause, and executes the associated block of code.
+The `switch` statement is used to perform different actions based on different conditions. It evaluates an expression and matches the expression's value to a case clause, and executes the associated block of code.
 
 ```javascript
 let day = 3
@@ -350,11 +351,11 @@ console.log(`Today is ${dayName}`)
 
 # Loops
 
-- They are used to execute a block of code repeatedly until a specified condition evaluates to false. They provide a way to iterate over arrays, manipulate strings, and perform other repetitive tasks efficiently.
+They are used to execute a block of code repeatedly until a specified condition evaluates to false. They provide a way to iterate over arrays, manipulate strings, and perform other repetitive tasks efficiently.
 
 ## `for` Loop
 
-- Use `for` when you know the number of iterations in advance.
+Use `for` when you know the number of iterations in advance.
 
 ```javascript
 for (let i = 0; i < 5; i++) {
@@ -364,7 +365,7 @@ for (let i = 0; i < 5; i++) {
 
 ## `while` Loop & `do...while` Loop
 
-- Use `while` and `do...while` when the number of iterations is determined by a condition.
+Use `while` and `do...while` when the number of iterations is determined by a condition.
 
 ```javascript
 let count = 0
@@ -384,7 +385,7 @@ do {
 
 ## `for...in` Loop
 
-- `for...in` is used to iterate over object properties.
+`for...in` is used to iterate over object properties.
 
 ```javascript
 const person = {
@@ -400,7 +401,7 @@ for (let key in person) {
 
 ## `for...of` Loop
 
-- `for...of` is used to iterate over iterable objects like arrays and strings.
+`for...of` is used to iterate over iterable objects like arrays and strings.
 
 ```javascript
 const fruits = ['apple', 'banana', 'cherry']
@@ -411,11 +412,11 @@ for (let fruit of fruits) {
 
 # Arrays and Objects
 
-- Arrays and objects are fundamental data structures in JavaScript, they are used for organizing and manipulating data.
+Arrays and objects are fundamental data structures in JavaScript, they are used for organizing and manipulating data.
 
 ## Arrays
 
-- Arrays are ordered collections of elements accessed by index, useful for lists of similar items.
+Arrays are ordered collections of elements accessed by index, useful for lists of similar items.
 
 **Creating Arrays:**
 
@@ -460,7 +461,7 @@ fruits.forEach(function (fruit) {
 
 ### Objects:
 
-- Objects are collections of key-value pairs, accessed by key, ideal for structured data with different properties.
+Objects are collections of key-value pairs, accessed by key, ideal for structured data with different properties.
 
 **Creating Objects:**
 
@@ -514,12 +515,12 @@ Object.keys(person).forEach(function (key) {
 
 # Events
 
-- Events are actions
-- Events in JavaScript allow you to respond to user actions and browser events, enhancing interactivity in your web applications.
+Events are actions
+Events in JavaScript allow you to respond to user actions and browser events, enhancing interactivity in your web applications.
 
 # High Order Functions in JS
 
-- Higher-order functions in JavaScript accept or return functions, enabling flexible and concise coding by treating functions as values.
+Higher-order functions in JavaScript accept or return functions, enabling flexible and concise coding by treating functions as values.
 
 ### .map()
 
@@ -531,7 +532,7 @@ Object.keys(person).forEach(function (key) {
 
 ### .filter()
 
-- Filters elements of an array based on a condition and returns a new array with the filtered elements.
+Filters elements of an array based on a condition and returns a new array with the filtered elements.
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5, 6]
@@ -543,7 +544,7 @@ console.log(evenNumbers)
 
 ### .reduce()
 
-- Reduces the elements of an array to a single value, applying a function to each element
+Reduces the elements of an array to a single value, applying a function to each element
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5]
@@ -558,7 +559,7 @@ console.log(sum)
 
 ### .forEach()
 
-- Executes a provided function once for each array element
+Executes a provided function once for each array element
 
 ```javascript
 const fruits = ['apple', 'banana', 'cherry']
@@ -570,7 +571,7 @@ fruits.forEach((fruit) => {
 
 ### .find()
 
-- Returns the first element in the array that satisfies a provided testing function.
+Returns the first element in the array that satisfies a provided testing function.
 
 ```javascript
 const numbers = [10, 20, 30, 40, 50]
@@ -582,7 +583,7 @@ console.log(foundNumber)
 
 ### .some()
 
-- Checks if at least one element in the array satisfies a provided testing function
+Checks if at least one element in the array satisfies a provided testing function
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5]
@@ -594,7 +595,7 @@ console.log(hasEvenNumber)
 
 ### .every()
 
-- Checks if all elements in the array satisfy a provided testing function.
+Checks if all elements in the array satisfy a provided testing function.
 
 ```javascript
 const numbers = [2, 4, 6, 8, 10]
@@ -606,7 +607,7 @@ console.log(allEvenNumbers)
 
 ### .sort()
 
-- Sorts the elements of an array in place and returns the sorted array.
+Sorts the elements of an array in place and returns the sorted array.
 
 ```javascript
 const fruits = ['banana', 'apple', 'cherry']
@@ -618,7 +619,7 @@ console.log(fruits)
 
 ### .concat()
 
-- Returns a new array comprised of the array on which it is called joined with other arrays and/or values.
+Returns a new array comprised of the array on which it is called joined with other arrays and/or values.
 
 ```javascript
 const array1 = [1, 2, 3]
@@ -631,7 +632,7 @@ console.log(newArray)
 
 ### .flatMap()
 
-- Maps each element using a mapping function, then flattens the result into a new array.
+Maps each element using a mapping function, then flattens the result into a new array.
 
 ```javascript
 const numbers = [1, 2, 3]
