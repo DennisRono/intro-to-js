@@ -514,7 +514,12 @@ Object.keys(person).forEach(function (key) {
 
 # Events
 
+- Events are actions
+- Events in JavaScript allow you to respond to user actions and browser events, enhancing interactivity in your web applications.
+
 # High Order Functions in JS
+
+- Higher-order functions in JavaScript accept or return functions, enabling flexible and concise coding by treating functions as values.
 
 ### .map()
 
@@ -526,18 +531,114 @@ Object.keys(person).forEach(function (key) {
 
 ### .filter()
 
+- Filters elements of an array based on a condition and returns a new array with the filtered elements.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6]
+
+const evenNumbers = numbers.filter((num) => num % 2 === 0)
+
+console.log(evenNumbers)
+```
+
 ### .reduce()
+
+- Reduces the elements of an array to a single value, applying a function to each element
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+
+const sum = numbers.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+)
+
+console.log(sum)
+```
 
 ### .forEach()
 
+- Executes a provided function once for each array element
+
+```javascript
+const fruits = ['apple', 'banana', 'cherry']
+
+fruits.forEach((fruit) => {
+  console.log(fruit)
+})
+```
+
 ### .find()
+
+- Returns the first element in the array that satisfies a provided testing function.
+
+```javascript
+const numbers = [10, 20, 30, 40, 50]
+
+const foundNumber = numbers.find((num) => num > 25)
+
+console.log(foundNumber)
+```
 
 ### .some()
 
+- Checks if at least one element in the array satisfies a provided testing function
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+
+const hasEvenNumber = numbers.some((num) => num % 2 === 0)
+
+console.log(hasEvenNumber)
+```
+
 ### .every()
+
+- Checks if all elements in the array satisfy a provided testing function.
+
+```javascript
+const numbers = [2, 4, 6, 8, 10]
+
+const allEvenNumbers = numbers.every((num) => num % 2 === 0)
+
+console.log(allEvenNumbers)
+```
 
 ### .sort()
 
+- Sorts the elements of an array in place and returns the sorted array.
+
+```javascript
+const fruits = ['banana', 'apple', 'cherry']
+
+fruits.sort()
+
+console.log(fruits)
+```
+
 ### .concat()
 
+- Returns a new array comprised of the array on which it is called joined with other arrays and/or values.
+
+```javascript
+const array1 = [1, 2, 3]
+const array2 = [4, 5, 6]
+
+const newArray = array1.concat(array2)
+
+console.log(newArray)
+```
+
 ### .flatMap()
+
+- Maps each element using a mapping function, then flattens the result into a new array.
+
+```javascript
+const numbers = [1, 2, 3]
+
+const doubledAndSquared = numbers.flatMap((num) => [num * 2, num * 2 + 1])
+
+console.log(doubledAndSquared)
+```
+
+### setTimeout
