@@ -1,8 +1,10 @@
 # Introduction to JavaScript
 
+- JavaScript files have the file extension `.js`
+
 ## Keywords in JavaScript
 
-- eywords are reserved words that have special meanings and are used to perform various operations within js
+- Keywords are reserved words that have special meanings and are used to perform various operations within js
 - Keywords include:- `await`, `break`, `case`, `catch`, `class`, `const`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `enum`, `export`, `extends`, `false`, `finally`, `for`, `function`, `if`, `import`, `in`, `instanceof`, `new`, `null`, `return`, `super`, `switch`, `this`, `throw`, `true`, `try`, `typeof`, `var`, `void`, `while`, `with`, `yield` and many more.
 
 ## Variables
@@ -98,7 +100,7 @@ let anotherBigInt = 1234567890123456789012345678901234567890n // Using the 'n' n
 
 - Basic, immutable data types that hold the actual values and not references.
 
-# Operators
+# Operations
 
 JavaScript supports a wide variety of operations that can be performed on different data types. These operations can be arithmetic, comparison, logical, bitwise, assignment, and more.
 
@@ -261,27 +263,258 @@ These operations are used to manipulate and combine strings.
 ### Example:
 
 ```javascript
-let firstName = 'John'
-let lastName = 'Doe'
+let firstName = 'Dennis'
+let lastName = 'Kibet'
 let fullName = firstName + ' ' + lastName
-console.log(fullName) // John Doe
+console.log(fullName)
 
 let age = 30
 let greeting = `Hello, my name is ${firstName} ${lastName} and I am ${age} years old.`
-console.log(greeting) // Hello, my name is John Doe and I am 30 years old.
+console.log(greeting)
 ```
 
 # Functions
 
+- functions are used to encapsulate a pieces of code that can be executed and reused.
+- functions are defined using the function keyword. They can be named or anonymous.
+
+```javascript
+function greet(name) {
+  return `Hello, ${name}!`
+}
+console.log(greet('Kibet'))
+```
+
+- Arrow functions provide a more concise syntax than normal functions, especially useful for short, single-expression functions.
+
+```javascript
+let add = (a, b) => {
+  return a + b
+}
+console.log(add(2, 3))
+```
+
 # Conditional Statements
+
+- They are used to make decisions in code based on certain conditions.
+
+## `if else` Statement
+
+- The `if` statement evaluates a condition inside parentheses. If the condition is true, the block of code inside the curly braces {} is executed. The `else` statement is used with an if statement to execute a block of code if the `if` condition evaluates to false.
+
+```javascript
+let temperature = 25
+
+if (temperature > 30) {
+  console.log("It's a hot day!")
+} else {
+  console.log("It's not very hot today.")
+}
+```
+
+## Ternary Operator (`? :`)
+
+- The ternary operator provides a concise way to write simple if...else statements. It evaluates a condition and returns one value if true, and another value if false.
+
+```javascript
+let score = 75
+let message = score >= 60 ? 'Pass' : 'Fail'
+
+console.log(message)
+```
+
+## `switch` Statement
+
+- The `switch` statement is used to perform different actions based on different conditions. It evaluates an expression and matches the expression's value to a case clause, and executes the associated block of code.
+
+```javascript
+let day = 3
+let dayName
+
+switch (day) {
+  case 1:
+    dayName = 'Monday'
+    break
+  case 2:
+    dayName = 'Tuesday'
+    break
+  case 3:
+    dayName = 'Wednesday'
+    break
+  default:
+    dayName = 'Unknown'
+}
+
+console.log(`Today is ${dayName}`)
+```
 
 # Loops
 
+- They are used to execute a block of code repeatedly until a specified condition evaluates to false. They provide a way to iterate over arrays, manipulate strings, and perform other repetitive tasks efficiently.
+
+## `for` Loop
+
+- Use `for` when you know the number of iterations in advance.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i)
+}
+```
+
+## `while` Loop & `do...while` Loop
+
+- Use `while` and `do...while` when the number of iterations is determined by a condition.
+
+```javascript
+let count = 0
+while (count < 3) {
+  console.log(count)
+  count++
+}
+```
+
+```javascript
+let i = 0
+do {
+  console.log(i)
+  i++
+} while (i < 3)
+```
+
+## `for...in` Loop
+
+- `for...in` is used to iterate over object properties.
+
+```javascript
+const person = {
+  name: 'Dennis Kibet',
+  age: 30,
+  city: 'Nairobi',
+}
+
+for (let key in person) {
+  console.log(`${key}: ${person[key]}`)
+}
+```
+
+## `for...of` Loop
+
+- `for...of` is used to iterate over iterable objects like arrays and strings.
+
+```javascript
+const fruits = ['apple', 'banana', 'cherry']
+for (let fruit of fruits) {
+  console.log(fruit)
+}
+```
+
 # Arrays and Objects
+
+- Arrays and objects are fundamental data structures in JavaScript, they are used for organizing and manipulating data.
+
+## Arrays
+
+- Arrays are ordered collections of elements accessed by index, useful for lists of similar items.
+
+**Creating Arrays:**
+
+```javascript
+// Array of numbers
+let numbers = [1, 2, 3, 4, 5]
+
+// Array of strings
+let fruits = ['apple', 'banana', 'cherry']
+
+// Mixed data types
+let mixed = [1, 'apple', true, { name: 'Dennis' }]
+```
+
+**Accessing Array Elements:**
+
+```javascript
+console.log(fruits[0]) // Outputs: 'apple'
+console.log(numbers.length) // Outputs: 5 (length of the array)
+```
+
+**Modifying Arrays:**
+
+```javascript
+fruits.push('orange') // Adds 'orange' to the end
+fruits.pop() // Removes the last element ('cherry' in this case)
+fruits[1] = 'pear' // Updates the element at index 1 to 'pear'
+```
+
+**Iterating Over Arrays:**
+
+```javascript
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i])
+}
+
+// Using forEach
+fruits.forEach(function (fruit) {
+  console.log(fruit)
+})
+```
+
+### Objects:
+
+- Objects are collections of key-value pairs, accessed by key, ideal for structured data with different properties.
+
+**Creating Objects:**
+
+```javascript
+let person = {
+  name: 'Kibet',
+  age: 30,
+  city: 'Nairobi',
+}
+
+// Accessing object properties
+console.log(person.name) // Outputs: 'Alice'
+console.log(person['age']) // Outputs: 30
+```
+
+**Adding and Modifying Properties:**
+
+```javascript
+person.email = 'kibet@example.com' // Adding a new property
+person.age = 22 // Modifying an existing property
+```
+
+**Nested Objects:**
+
+```javascript
+let car = {
+  make: 'Toyota',
+  model: 'Camry',
+  year: 2020,
+  owner: {
+    name: 'Dennis',
+    age: 22,
+  },
+}
+
+console.log(car.owner.name)
+```
+
+**Iterating Over Object Properties:**
+
+```javascript
+for (let key in person) {
+  console.log(`${key}: ${person[key]}`)
+}
+
+// Using Object.keys()
+Object.keys(person).forEach(function (key) {
+  console.log(`${key}: ${person[key]}`)
+})
+```
 
 # Events
 
-# High Order Functions
+# High Order Functions in JS
 
 ### .map()
 
